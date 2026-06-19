@@ -1,0 +1,46 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@300;400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Space Grotesk", sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+}
+
+/* Base interactive overlays and custom scrollbars to elevate craftsmanship */
+@layer base {
+  body {
+    @apply bg-[#F9F9F7] text-[#1A1A1A] antialiased font-sans selection:bg-neutral-200 selection:text-black;
+  }
+}
+
+/* Custom styles for drafting grid and schematic overlay graphics */
+.blueprint-grid {
+  background-size: 32px 32px;
+  background-image: 
+    linear-gradient(to right, rgba(229, 231, 235, 0.4) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(229, 231, 235, 0.4) 1px, transparent 1px);
+}
+
+.blueprint-grid-dark {
+  background-size: 32px 32px;
+  background-image: 
+    linear-gradient(to right, rgba(63, 63, 70, 0.25) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(63, 63, 70, 0.25) 1px, transparent 1px);
+}
+
+/* Custom animation for pulsating comment pins */
+@keyframes pin-glow {
+  0%, 100% {
+    transform: translate(-50%, -50%) scale(1);
+    box-shadow: 0 0 0 0 rgba(220, 38, 38, 0.4);
+  }
+  50% {
+    transform: translate(-50%, -50%) scale(1.15);
+    box-shadow: 0 0 0 10px rgba(220, 38, 38, 0);
+  }
+}
+
+.pulsing-pin {
+  animation: pin-glow 2s infinite ease-in-out;
+}

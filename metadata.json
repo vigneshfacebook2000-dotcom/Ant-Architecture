@@ -1,0 +1,6 @@
+{
+  "name": "Ant Architecture Portal",
+  "description": "Premium portfolio and collaborative project management portal for Ant Architecture, featuring 3D visualizations, 2D drawings, milestone tracking, and click-to-pin feedback.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
